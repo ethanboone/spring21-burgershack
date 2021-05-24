@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using burgershack.Repositories;
 
 namespace burgershack
 {
@@ -38,6 +39,9 @@ namespace burgershack
             services.AddTransient<BurgersService>();
             services.AddTransient<DrinksService>();
             services.AddTransient<SidesService>();
+            services.AddTransient<BurgersRepository>();
+            services.AddTransient<DrinksRepository>();
+            services.AddTransient<SidesRepository>();
 
         }
 
